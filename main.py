@@ -9,7 +9,7 @@ class DemoApp(MDApp):
         self.theme_cls.primary_palette = "BlueGray"
         self.theme_cls.hue="700"
         return Builder.load_file("sub.kv") 
-        
+      
     def find(self):
         domain = self.root.ids.domain.text
        # if domain == "":
