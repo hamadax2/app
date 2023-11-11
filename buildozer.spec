@@ -6,13 +6,13 @@
 [app]
 
 # (str) Title of your application
-title = SubdFinder
+title = myapp
 
 # (str) Package name
-package.name = subdfinder
+package.name = app
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.msa
+package.domain = org.app
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -42,7 +42,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3==3.9.10,hostpython3==3.9.10,kivy==2.0.0,kivymd==1.1.1,requests,json
+requirements = python3==3.9.10,hostpython3==3.9.10,kivy==2.2.0,kivymd==1.1.1,requests
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -72,10 +72,10 @@ orientation = portrait
 #
 osx.python_version = 3.9.10
 #
-# author = © Copyright Info
+# author = © Copyright Hamada king
 
 # Kivy version to use
-osx.kivy_version = 2.0.0
+osx.kivy_version = 2.2.0
 
 #
 # Android specific
@@ -103,7 +103,7 @@ fullscreen = 0
 
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
-#android.permissions = android.permission.INTERNET, (name=android.permission.WRITE_EXTERNAL_STORAGE;maxSdkVersion=18)
+android.permissions = android.permission.INTERNET
 
 # (list) features (adds uses-feature -tags to manifest)
 #android.features = android.hardware.usb.host
@@ -112,7 +112,7 @@ fullscreen = 0
 #android.api = 31
 
 # (int) Minimum API your APK / AAB will support.
-#android.minapi = 24
+#android.minapi = 21
 
 # (int) Android SDK version to use
 #android.sdk = 20
@@ -278,7 +278,7 @@ fullscreen = 0
 #android.uses_library =
 
 # (str) Android logcat filters to use
-#android.logcat_filters = *:S python:D
+android.logcat_filters = *:S python:D
 
 # (bool) Android logcat only display log for activity's pid
 #android.logcat_pid_only = False
@@ -291,7 +291,7 @@ fullscreen = 0
 
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
 # In past, was `android.arch` as we weren't supporting builds for multiple archs at the same time.
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = armeabi-v7a
 
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing
