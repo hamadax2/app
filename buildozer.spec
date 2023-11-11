@@ -6,13 +6,13 @@
 [app]
 
 # (str) Title of your application
-title = myapp
+title = SubdFinder
 
 # (str) Package name
-package.name = app
+package.name = msa
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.app
+package.domain = org.msa
 
 # (str) Source code where the main.py live
 source.dir = .
