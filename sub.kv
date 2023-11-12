@@ -1,0 +1,68 @@
+Screen:
+    MDCard:
+        size_hint: None, None
+        size: 1100,2200
+        pos_hint: {"center_x":0.5,"center_y":0.5}
+        padding:25
+        spacing:25
+        orientation: "vertical"
+        MDRoundFlatButton:
+            id: mod
+            text: "Switch to Light/Dark"
+            font_size: 30
+            pos_hint: {"center_x":.2,"center_y":.5}
+            on_press : app.dark()
+        MDLabel:
+            id: welcom_label
+            text: "Subdomain Finder"
+            color: app.theme_cls.primary_color
+            font_size: 80
+            halign: "center"
+            size_hint_y:None
+            height : self.texture_size[1]
+            padding_y: 40
+        MDTextField:
+            id : domain
+            hint_text: "Enter the domain here"
+            icon_right: "android"
+            #icon_right: "account"
+            size_hint_x: 0.8
+            font_size:45
+            pos_hint: {'center_x':0.5}
+        MDRectangleFlatButton:
+            text: "Find"    
+            font_size:40
+            pos_hint: {"center_x":0.5,"center_y":0.5}
+            on_press: app.find()
+        ScrollView:
+            do_scroll_x: False 
+            MDTextField:
+                id : subdomains
+                hint_text: ""
+                size_hint_x: 1.5
+                size_hint_y: 3.0
+                font_size:40
+                pos_hint: {'center_x':0.5}
+                multiline: True      
+                #readonly: True
+        MDRoundFlatButton:
+            text: "Clear"    
+            font_size:40
+            pos_hint: {"center_x":0.5,"center_y":0.5}
+            on_press: app.clear()
+        Widget:
+            size_hint_y:None
+            height : 50
+        MDLabel:
+            id: welcom_label
+            text: "Created By Hamada From SD TECH\n\nFacebook : facebook.com/king.hamada.sd\nTelegram : t.me/klinuxsd"
+            color: app.theme_cls.primary_color
+            font_size: 30
+            font_style: "Caption"
+            halign: "center"
+            size_hint_y:None
+            height : self.texture_size[1]
+            padding_y: 40
+            
+        
+            
