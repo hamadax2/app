@@ -1,0 +1,129 @@
+Screen:
+    MDBoxLayout:
+        orientation: "vertical"
+        MDCard:
+            md_bg_color:app.theme_cls.primary_color
+            elevation: 2
+            size_hint:  1,.07
+            MyIcon:
+                icon: "menu"
+                on_release: app.open_settings()
+            MDLabel:
+                text: "SD TECH"
+                halign: "center"
+                user_font_size: "20sp"
+                color: [1,1,1,1]
+            MyIcon:
+                icon: "moon-waning-crescent"
+                on_press: app.dark()
+        MDBoxLayout:
+            orientation: "vertical"
+        	MDLabel:
+                id: welcom_label
+                text: "Subdomain Finder"
+                font_size: "40sp"
+                halign: "center"
+                size_hint_y:None
+                height : self.texture_size[1]
+                padding_y: 40
+            MDTextField:
+                id : domain
+                hint_text: "Enter the domain here"
+                icon_right: "android"
+                #icon_right: "account"
+                size_hint_x: 0.8
+                #font_size: "20dp"
+                pos_hint: {'center_x':0.5}
+            MDRectangleFlatButton:
+                text: "Find"    
+                #font_size: "20sp"
+                pos_hint: {"center_x":0.5,"center_y":0.5}
+                on_release: app.search(domain.text)
+            MDBoxLayout:
+                orientation: "vertical"
+                padding:["10dp","20dp","0dp","0dp"]
+                MDSpinner:
+                    id: rc_spin
+                    size_hint: None, None
+                    size: dp(46), dp(46)
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+                    active: False
+                ScrollView:
+                    do_scroll_x: False
+                    MDTextField:
+                        id : subdomains
+                        hint_text: ""
+                        size_hint_x: 1
+                        size_hint_y: 2.0
+                        font_size:"15sp"
+                        pos_hint: {'center_x':0.5,'center_y':.5}
+                        multiline: True      
+                        #readonly: True
+            MDBoxLayout:
+                orientation: "horizontal"
+                size_hint_y:.1
+                Widget:
+                    size_hint:None,None
+                    size: "80dp","10dp"
+                MDRoundFlatButton:
+                    text: "Clear"    
+                    #pos_hint: {"center_x":0.5}
+                    on_press: app.clear()
+                Widget:
+                    size_hint:None,None
+                    size: "100dp","0dp"
+                MDRoundFlatButton:
+                    text: "Copy"    
+                    #pos_hint: {"right":0.55}
+                    on_press: app.copy()
+            
+            MDLabel:
+                id: welcom_label
+                text: "Created By Hamada From SD TECH\n\nFacebook : facebook.com/king.hamada.sd\nTelegram : t.me/klinuxsd"
+                color: app.theme_cls.primary_color
+                font_size: "30sp"
+                font_style: "Caption"
+                halign: "center"
+                size_hint_y:None
+                height : self.texture_size[1]
+                padding_y: 40
+
+<MyIcon@MDIconButton>:
+    color: [.7,0,0,1]
+    size_hint: None,None
+    user_font_size: "20sp"
+    theme_text_color: "Custom"
+    size: ("30dp","30dp")
+    text_color: [1,1,1,1]
+   
+<SettingsContent>
+    orientation: "vertical"
+    padding: "30dp"
+    spacing: "10dp"
+    size_hint_y: None
+    height: "250dp"
+
+    MDBoxLayout:
+        orientation: "vertical"
+        spacing: "30dp"
+
+
+        MDLabel:
+            text: "Menu"
+            halign: "center"
+            font_style: "Caption"
+
+    Widget:
+        size_hint_y: None
+        height: "20dp"
+    MDSeparator:
+    MDFlatButton:
+        text: "Subdomain Finder"
+        theme_text_color: "Primary"
+        pos_hint: {"center_x": .5}
+    MDSeparator:
+    MDFlatButton:
+        text: "Host Checker - Soon !"
+        theme_text_color: "Error"
+        pos_hint: {"center_x": .5}
+
