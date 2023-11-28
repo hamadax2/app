@@ -34,7 +34,7 @@ source.include_exts = py,png,jpg,kv,atlas
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 0.2
+version = 2.0
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -49,10 +49,10 @@ requirements = python3==3.9.10,hostpython3==3.9.10,kivy==2.2.0,kivymd==1.1.1,req
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-#presplash.filename = icon.png
+presplash.filename = /images/presplash.jpg
 
 # (str) Icon of the application
-#icon.filename = icon.png
+icon.filename = /images/icon.png
 
 # (list) Supported orientations
 # Valid options are: landscape, portrait, portrait-reverse or landscape-reverse
