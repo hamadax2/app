@@ -21,10 +21,10 @@ MainScreen:
                             halign: "center"
                             font_size: "30sp"
                             color: [1,1,1,1]
-                            font_name: "fonts/font.otf"
+                            font_name: "font"
                         MDLabel:
                             text: root.bidi_dark
-                            font_name: "fonts/font.otf"
+                            font_name: "font"
                             halign: "center"
                             user_font_size: "10sp"
                             color: [1,1,1,1]
@@ -38,7 +38,7 @@ MainScreen:
                     	MDLabel:
                             id: title
                             text: root.bidi_title
-                            font_name: "fonts/font.otf"
+                            font_name: "font"
                             font_size: "40sp"
                             halign: "center"
                             size_hint_y:None
@@ -47,14 +47,14 @@ MainScreen:
                         MDTextField:
                             id : domain
                             hint_text: root.bidi_text
-                            font_name: "fonts/font.otf"
+                            font_name: "font"
                             font_size: "20sp"
                             #icon_right: "android"
                             size_hint_x: 0.8
                             pos_hint: {'center_x':0.5}
                         MDRectangleFlatButton:
                             text: root.bidi_find
-                            font_name: "fonts/font.otf"
+                            font_name: "font"
                             pos_hint: {"center_x":0.5,"center_y":0.5}
                             on_release: app.search(domain.text)
                         MDBoxLayout:
@@ -86,14 +86,14 @@ MainScreen:
                                 size: "80dp","10dp"
                             MDRoundFlatButton:
                                 text: root.bidi_clear
-                                font_name: "fonts/font.otf"
+                                font_name: "font"
                                 on_press: app.clear()
                             Widget:
                                 size_hint:None,None
                                 size: "100dp","0dp"
                             MDRoundFlatButton:
                                 text: root.bidi_copy
-                                font_name: "fonts/font.otf"
+                                font_name: "font"
                                 on_press: app.copy()
                         
                         MDLabel:
