@@ -6,7 +6,7 @@
 [app]
 
 # (str) Title of your application
-title = SubdFinder
+title = SubdFinder_Ar
 
 # (str) Package name
 package.name = msa
@@ -34,7 +34,7 @@ source.include_exts = py,png,jpg,kv,atlas
 #source.exclude_patterns = license,images/*/*.jpg
 
 # (str) Application versioning (method 1)
-version = 2.0
+version = 2.1
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
@@ -42,7 +42,7 @@ version = 2.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3==3.9.10,hostpython3==3.9.10,kivy==2.2.0,kivymd==1.1.1,requests
+requirements = python3==3.9.10,hostpython3==3.9.10,kivy==2.2.0,kivymd==1.1.1,requests,python-bidi,arabic_reshaper
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
